@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@category Wargento
+@package Wargento_Cache
+@author Gabriel C. (lazycoder.ro[at]gmail.com / http://lazycoder.ro)
+@since 25.09.13
+-->
+<config>
+    <modules>
+        <Wargento_Cache>
+            <version>0.0.1</version>
+        </Wargento_Cache>
+    </modules>
+    <global>
+        <models>
+            <wargento_cache>
+                <class>Wargento_Cache_Model</class>
+            </wargento_cache>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <cache_cms_static_blocks>
+                        <class>wargento_cache/observer</class>
+                        <method>cacheStaticCmsBlocks</method>
+                    </cache_cms_static_blocks>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
+    </frontend>
+</config>

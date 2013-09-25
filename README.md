@@ -1,0 +1,2 @@
+magento-cache-cms-blocks
+========================
